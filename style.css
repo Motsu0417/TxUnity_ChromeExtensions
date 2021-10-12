@@ -7,7 +7,6 @@
 }
 h1{
     text-align: center;
-    grid-area: header;
 }
 button{
     font-size: 16px;
@@ -15,7 +14,7 @@ button{
     margin: 8px;
     border-radius: 10px;
     padding: 10px;
-    width: 1fr;
+    width: 95%;
     cursor: pointer;
 }
 input{
@@ -23,53 +22,31 @@ input{
     color: #555;
     padding: 8px;
     height: 40px;
-    grid-area: result;
-    width: 95%;
-}
-body{
-    --height: 60px;
-    width: max-content;
-    padding: 8px;
-    background: #333;
-    display: grid;
-    grid-template-rows: var(--height) var(--height) var(--height) var(--height) var(--height) 10px 20px;
-    grid-template-columns: 1fr 75px 50px;
-    grid-template-areas:
-        "header header header"
-        "ttlBtn ttlBtn ttlBtn"
-        "urlBtn urlBtn urlBtn"
-        "markBtn markBtn markBtn"
-        "result result copyBtn"
-        "...... msg msg"
-        "notice notice notice";
-}
-button.copy{
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    font-size: 24px;
-    padding: 4px;
-    grid-area: copyBtn;
+    width: 100%;
 }
 
-button.ttl{
-    grid-area: ttlBtn;
+textarea{
+    width:100%;
+    color:#555;
 }
-button.url{
-    grid-area: urlBtn;
+
+body{
+    --height: 60px;
+    width: 320px;
+    padding: 8px;
+    background: #333;
 }
-button.bmark{
-    grid-area: markBtn;
+button.submit{
+    
 }
+
 p{
     width: max-content;
-    grid-area: notice;
     text-align: right;
     z-index: 2;
 }
 div.msg{
     z-index: 300;
-    grid-area: msg;
     display: none;
     width: 100px;
     height: 30px;
@@ -83,6 +60,5 @@ p.copied, p.failed{
     color: #333;
     z-index: 350;
     display: none;
-    grid-area: unset;
     position: absolute;
 }
